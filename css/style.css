@@ -419,7 +419,7 @@ main > #hero-image {
     width: 106px;
     height: 50px;
     margin-top: 7px;
-    background-image: url("../img/logo.png");
+    background-image: url("img/logo.png");
     background-repeat: no-repeat;
   }
   nav a.sidenav-trigger, nav a.sidenav-trigger i, nav a.nav-search-btn i {
