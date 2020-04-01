@@ -27,7 +27,7 @@
               -->
               <ul class="right">
                 <li><a href="#" class="btn nav-search-btn"><i class="material-icons">search</i></a></li>
-                <li><a href="#" class="btn nav-login-btn"><i class="material-icons left">account_box</i><span>LOGIN</span></a></li>
+                <li><a href="#login-modal" class="btn modal-trigger nav-login-btn"><i class="material-icons left">account_box</i><span>LOGIN</span></a></li>
                 <li><a href="#" class="btn nav-register-btn"><i class="material-icons left">add_box</i><span>registreren </span></a></li>
               </ul>
             </div>
@@ -121,6 +121,45 @@
       </div>
     </main>
 
+    <!-- Modal Login -->
+    <div id="login-modal" class="modal">
+      <div class="modal-content modal-header-lime">
+        <div class="row">
+          <h5 class="left">Login</h5><a href="#!" class="modal-close"><i class="material-icons right">close</i></a>
+        </div>
+      </div>
+      <div class="modal-content">
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" type="email" class="validate">
+                <label for="email">Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="password" type="password" class="validate">
+                <label for="password">Password</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <button id="submit" type="submit" class="btn btn-modal-login blue">INLOGGEN</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="container">
+          <span>nog geen account?</span>
+          <a href="#!" class="modal-close btn btn-modal-login-register">NIEUW? REGISTREREN!</a>
+        </div>
+      </div>
+    </div>
+
+
     <footer class="page-footer">
       <div class="container">
         <div class="row">
@@ -155,8 +194,11 @@
         var elems = document.querySelectorAll('.sidenav');
         var options = {edge:'right'};
         var instances = M.Sidenav.init(elems, options);
-      });
 
+        var modalElems = document.querySelectorAll('.modal');
+        var modalOptions = {preventScrolling:false};
+        var modalInstances = M.Modal.init(modalElems, modalOptions);
+      });
     </script>
   </body>
 </html>
