@@ -1,0 +1,286 @@
+<html>
+
+  <head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <!--<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">-->
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" type="text/css" href="css/materialize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>FreelanceITJobs</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="container">
+          <div class="row">
+            <div class="nav-wrapper">
+              <a href="#!" class="left brand-logo"></a>
+              <!--
+              <a href="#" data-target="mobile-demo" class="right sidenav-trigger"><i class="material-icons">menu</i></a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="#"><i class="material-icons left">account_box</i>LOGIN</a></li>
+                <li><a href="#" class="btn">registreren <i class="material-icons right">add_box</i></a></li>
+              </ul>
+              -->
+              <ul class="right">
+                <li><a href="#" class="btn nav-search-btn"><i class="material-icons">search</i></a></li>
+                <li><a href="#" class="btn nav-register-btn"><i class="material-icons left">add_box</i><span>registreren </span></a></li>
+                <li><a href="#login-modal" class="modal-trigger btn nav-login-btn"><i class="material-icons left">account_box</i><span>LOGIN</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--
+    <ul class="right sidenav" id="mobile-demo">
+      <li><a href="#!" class="sidenav-close"><i class="material-icons right">close</i></a></li>
+      <li><a href="#"><i class="material-icons left">account_box</i>LOGIN</a></li>
+      <li><a href="#" class="btn">registreren <i class="material-icons right">add_box</i></a></li>
+    </ul>
+    -->
+    <main>
+      <section id="hero">
+
+          <div class="container">
+            <div class="row">
+              <div class="col center-align">
+                <h1> Registreren </h1>
+              </div>
+            </div>
+      </section>
+
+      <section id="recent-freelance-opdrachten">
+        <form>
+        <div class="container white content-blue-container">
+          <div class="row">
+            <div class="col s12 blue">
+              <h2 class="content-blue-header">recente opdrachten</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col col-register-form s12">
+              <ul class="collapsible">
+                <li id="step-1" class="active">
+                  <div class="collapsible-header"><i class="material-icons">looks_one</i>Type account</div>
+                  <div class="collapsible-body">
+                    <p>
+                      <label>
+                        <input class="with-gap" name="company-type" type="radio" />
+                        <span>Ik ben een ZZPer en wil reageren op freelance opdrachten.</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input class="with-gap" name="company-type" type="radio" />
+                        <span>Ik werk voor een bedrijf en wil reageren op freelance opdrachten.</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input class="with-gap" name="company-type" type="radio" />
+                        <span>Ik werk voor een bedrijf en wil freelance opdrachten plaatsen.</span>
+                      </label>
+                    </p>
+                    <p>
+                      <a id="submit-step1" class="btn btn-register blue">VOLGENDE</a>
+                    </p>
+                  </div>
+                </li>
+                <li id="step-2" class="disabled">
+                  <div class="collapsible-header"><i class="material-icons">looks_two</i>Bedrijfsgegevens</div>
+                  <div class="collapsible-body">
+                    <p class="input-field">
+                      <input id="bedrijfsnaam" type="text" class="validate autocomplete">
+                      <label for="bedrijfsnaam">Bedrijfsnaam</label>
+                    </p>
+                    <p class="input-field">
+                      <input id="kvk" type="text" class="validate">
+                      <label for="kvk">KvK-Nummer</label>
+                    </p>
+                    <p>
+                      <a id="submit-step2" class="btn btn-register blue">VOLGENDE</a>
+                    </p>
+                  </div>
+                </li>
+                <li id="step-3" class="disabled">
+                  <div class="collapsible-header"><i class="material-icons">looks_3</i>Persoonlijke gegevens</div>
+                  <div class="collapsible-body">
+                    <p class="input-field">
+                      <input id="voornaam" type="text" class="validate">
+                      <label for="voornaam">Voornaam</label>
+                    </p>
+                    <p class="input-field">
+                      <input id="achternaam" type="text" class="validate">
+                      <label for="achternaam">Achternaam</label>
+                    </p>
+                    <p class="input-field">
+                      <input id="e-mail" type="email" class="validate">
+                      <label for="e-mail">E-mail</label>
+                    </p>
+                    <p>
+                      <button id="submit-step3" class="btn btn-register blue">registeren</button>
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        </form>
+      </section>
+      <div id="hero-image">
+        <div class="hero-img-overlay-container">
+          <div class="hero-img-overlay"></div>
+        </div>
+        <img class="responsive-img" src="img/hero.jpg">
+      </div>
+    </main>
+
+    <!-- Modal Login -->
+    <div id="login-modal" class="modal">
+      <div class="modal-content modal-header-lime">
+        <div class="row">
+          <h5 class="left">Login</h5><a href="#!" class="modal-close"><i class="material-icons right">close</i></a>
+        </div>
+      </div>
+      <div class="modal-content">
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" type="email" class="validate">
+                <label for="email">Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="password" type="password" class="validate">
+                <label for="password">Password</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <button id="submit" type="submit" class="btn btn-modal-login blue">INLOGGEN</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="container">
+          <span>nog geen account?</span>
+          <a href="register.html" class="modal-close btn btn-modal-login-register">NIEUW? REGISTREREN!</a>
+        </div>
+      </div>
+    </div>
+
+
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Footer Content</h5>
+            <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2020 FreelanceITJobs
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+      </div>
+    </footer>
+
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', function() {
+
+        var elems = document.querySelectorAll('.collapsible');
+        var options = {};
+        var instances = M.Collapsible.init(elems, options);
+        var modalElems = document.querySelectorAll('.modal');
+        var modalOptions = {preventScrolling:false};
+        var modalInstances = M.Modal.init(modalElems, modalOptions);
+
+        var elemsAutoComplete = document.querySelectorAll('.autocomplete');
+        var optionsAutoComplete = {data: {'LINKIT B.V.': null, 'LINKEDIN N.V.': null, 'Link-it B.V.': null}, minLength: 3};
+        var instances = M.Autocomplete.init(elemsAutoComplete, optionsAutoComplete);
+
+        var step1 = document.getElementById("step-1");
+        var lock = true;
+        var step2 = document.getElementById("step-2");
+        var step3 = document.getElementById("step-3");
+        var submitStep1 = document.getElementById("submit-step1");
+        var submitStep2 = document.getElementById("submit-step2");
+
+        step1.querySelector('.collapsible-header').addEventListener('click',function(e)
+        {
+          if (step1.classList.contains("active")) {
+            if(lock) {
+              event.preventDefault();
+              event.stopPropagation();
+            } else {
+              lock = true;
+            }
+          }
+        });
+        step2.querySelector('.collapsible-header').addEventListener('click',function(e)
+        {
+          if (step2.classList.contains("active") || step2.classList.contains("disabled")) {
+            if(lock) {
+              event.preventDefault();
+              event.stopPropagation();
+            } else {
+              lock = true;
+            }
+          }
+        });
+        step3.querySelector('.collapsible-header').addEventListener('click',function(e)
+        {
+          if (step3.classList.contains("active") || step3.classList.contains("disabled")) {
+            if(lock) {
+              event.preventDefault();
+              event.stopPropagation();
+            } else {
+              lock = true;
+            }
+          }
+        });
+        submitStep1.addEventListener('click',function(e)
+        {
+          step2.classList.remove("disabled")
+          step1.classList.add('completed');
+          lock = false;
+          step2.querySelector('.collapsible-header').click();
+          lock = true;
+        });
+        submitStep2.addEventListener('click',function(e)
+        {
+          step3.classList.remove("disabled")
+          step2.classList.add('completed');
+          lock = false;
+          step3.querySelector('.collapsible-header').click();
+          lock = true;
+        });
+
+
+      });
+    </script>
+  </body>
+</html>
